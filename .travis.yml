@@ -1,12 +1,20 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.12"
+- '0.12'
 before_script:
-  - npm install -g jspm
-  - npm install -g karma-cli
-  - npm install -g divshot-cli
-  - jspm config endpoints.github.auth $JSPM_AUTH
-  - jspm install
+- npm install -g jspm
+- npm install -g karma-cli
+- npm install -g divshot-cli
+- jspm config endpoints.github.auth $JSPM_AUTH
+- jspm install
 script:
-  - karma start karma.conf.js --single-run
+- karma start karma.conf.js --single-run
+deploy:
+  provider: npm
+  email: todd.moore@guardian.co.uk
+  api_key:
+    secure: He4fsZnBX/Dkxsyvq0oywJdlXgC8twh0/49CDztwUYfdrWSPT+EU04akT6rq2ICmLTnfbyxpCbNBOX8XcSHZrXOgrq9JPBfh2VuX+W7H6QrYvXInkWx5xPXhq1iGpG9Y52BbV/gnAXD6EPyXrMkwO51uHTF9fCIZ9Z8C9zx9/JQ=
+  on:
+    tags: true
+    repo: toddmoore/jspmtest
