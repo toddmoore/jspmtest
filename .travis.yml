@@ -21,5 +21,4 @@ deploy:
   local_dir: build
   on:
     repo: toddmoore/jspmtest
-    tags: true
     all_branches: true
