@@ -2,7 +2,7 @@
   "name": "mylib",
   "repository": "http://github.com/toddmoore/mylib",
   "registry": "jspm",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "lib/index",
   "jspm": {
     "format": "es6"
