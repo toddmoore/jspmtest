@@ -11,10 +11,12 @@ before_script:
 script:
 - karma start karma.conf.js --single-run
 deploy:
-  provider: npm
-  email: todd.moore@guardian.co.uk
-  api_key:
-    secure: He4fsZnBX/Dkxsyvq0oywJdlXgC8twh0/49CDztwUYfdrWSPT+EU04akT6rq2ICmLTnfbyxpCbNBOX8XcSHZrXOgrq9JPBfh2VuX+W7H6QrYvXInkWx5xPXhq1iGpG9Y52BbV/gnAXD6EPyXrMkwO51uHTF9fCIZ9Z8C9zx9/JQ=
+  provider: s3
+  access_key_id: AKIAIAK7BMN6OCOVQNSQ
+  secret_access_key:
+    secure: E1t0tWysOUQgrCj3646fahQAq+3KEReatuVNULDcgpRJtx3jq2SEZrTWuOUU6vLJ0biViaVyOGwbEmsdC72eF2OBgZMq0lcLsGdoQBGejBxETmwfY/3PdwX9Cq3oKOpvRFDeQ3DdrOlgbjWlHqK+C2pBZ12NoOpJ1/PJ4Ox3Uv0=
+  bucket: gdn-cdn
+  upload-dir: /embed/aus/2015/mar/test-travis/
+  acl: public_read
   on:
-    tags: true
     repo: toddmoore/jspmtest
