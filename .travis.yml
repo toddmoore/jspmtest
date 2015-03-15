@@ -16,7 +16,7 @@ deploy:
   secret_access_key:
     secure: E1t0tWysOUQgrCj3646fahQAq+3KEReatuVNULDcgpRJtx3jq2SEZrTWuOUU6vLJ0biViaVyOGwbEmsdC72eF2OBgZMq0lcLsGdoQBGejBxETmwfY/3PdwX9Cq3oKOpvRFDeQ3DdrOlgbjWlHqK+C2pBZ12NoOpJ1/PJ4Ox3Uv0=
   bucket: gdn-cdn
-  upload-dir: /embed/aus/2015/mar/test-travis/
+  upload-dir: embed/aus/2015/mar/test-travis
   acl: public_read
   local_dir: build
   on:
