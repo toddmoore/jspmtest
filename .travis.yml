@@ -18,6 +18,7 @@ deploy:
   bucket: gdn-cdn
   upload-dir: /embed/aus/2015/mar/test-travis/
   acl: public_read
+  local_dir: build
   on:
     repo: toddmoore/jspmtest
     tags: true

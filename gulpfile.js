@@ -11,6 +11,9 @@ gulp.task('deploy-master', function(){
     .pipe(bump({version: newVer}))
     .pipe(gulp.dest('./'))
     .on('end', shell.task([
+            'jspm bundle-sfx --minify lib/index',
+            'rm -rf ./build',
+            'mkdir build && cp -f ./build.js ./build/',
             'git add --all',
             'git commit -m "' + newVer + '"', 
             'git tag -a "' + newVer + '" -m "' + newVer + '"',
