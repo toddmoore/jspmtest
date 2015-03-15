@@ -1,13 +1,12 @@
-sevar pkg = require('./package.json');
+var pkg = require('./package.json');
 
 module.exports.capabilities = {
-  sl_firefox: {
-    base: 'SauceLabs',
-    browserName: 'firefox',
-    platform: 'Linux',
-    version: '14',
-    name: pkg.name + " (build: " + process.env.TRAVIS_BUILD_NUMBER + ")"
-  }
+  // sl_firefox: {
+  //   base: 'SauceLabs',
+  //   browserName: 'firefox',
+  //   platform: 'Linux',
+  //   version: '14',
+  //   name: pkg.name + " (build: " + process.env.TRAVIS_BUILD_NUMBER + ")"
   // },
   // sl_ios_safari: {
   //   base: 'SauceLabs',
